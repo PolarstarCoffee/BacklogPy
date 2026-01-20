@@ -1,0 +1,30 @@
+Backlog Application: Locally Stored Data + Locally Ran application
+Tech Stack:
+-Python
+#UI:
+-PyQt
+-PyInstaller (Dir based executable)
+
+
+
+==ADDITIONAL FEATURES==
++Local Profile:
+-Username
+-Password
+-Profile Picture
+
+
+==CORE FUNCTIONALITY==
++Backlog entry:
+-Title
+-Time Log
+-Description
+-Photo
+-Supplementary text box (chapter/notes)
+-Rating (out of 10)
++Log Library: Collection of Backlog entries
+
++Customizable UI:
+-Custom color UI Elements (Specific UI Components?)
+-Background
+-Drag and place UI elements(?)
