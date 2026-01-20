@@ -1,4 +1,4 @@
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QtGui
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton
 import sys
 import backlogObj
 
