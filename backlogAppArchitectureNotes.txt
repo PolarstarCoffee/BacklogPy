@@ -1,3 +1,6 @@
+-Use QWidget as a container to group other widgets
+inside layouts
+
 entry.py: 
 -Entry point for backlog application
 -imports the object used within backlog.py
