@@ -7,7 +7,7 @@ class backlogObj:
         self.thumbnail = None  # Placeholder for thumbnail image
         self.rating = None    # Placeholder for rating
     def __repr__(self):
-        return f"backlogObj(id={self.id}, title='{self.title}', description='{self.description}', status='{self.status}')"
+        return f"backlogObj(id={self.id}, title='{self.title}', description='{self.description}', status='{self.status}', thumbnail={self.thumbnail}, rating={self.rating})"
 
     def to_dict(self):
         return {

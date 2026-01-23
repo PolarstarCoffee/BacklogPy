@@ -3,6 +3,9 @@ import sys
 import backlogObj
 
 
+# Entry point for the application
+# This is a simple PyQt6 window that can be expanded later
+
 class EntryWindow(QMainWindow):
     def __init__(self):
         super().__init__()

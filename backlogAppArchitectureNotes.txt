@@ -1,0 +1,15 @@
+entry.py: 
+-Entry point for backlog application
+-imports the object used within backlog.py
+
+backlogObj.py:
+-backlog object is defined
+-Title
+-Time Log
+-Description
+-Photo
+-Supplementary text box (chapter/notes)
+-Rating (out of 10)
+
+backlogEdit.py:
+-backlog object manipulation 
