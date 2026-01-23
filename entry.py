@@ -16,6 +16,6 @@ class EntryWindow(QMainWindow):
         button.pressed.connect(self.close)
         self.setCentralWidget(button)
         self.show()
-app = QApplication([])
+app = QApplication(sys.argv)
 window = EntryWindow()
 app.exec()
