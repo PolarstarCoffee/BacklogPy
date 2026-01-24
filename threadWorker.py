@@ -2,6 +2,9 @@ import sys
 import traceback
 from PyQt6.QtCore import QRunnable, pyqtSlot
 
+def WorkerSignals():
+    raise NotImplementedError
+
 
 class threadWorker(QRunnable):
     #Worker thread with signals for handling exceptions
