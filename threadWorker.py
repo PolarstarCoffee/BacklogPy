@@ -1,9 +1,13 @@
 import sys
 import traceback
-from PyQt6.QtCore import QRunnable, pyqtSlot
+from PyQt6.QtCore import QRunnable, pyqtSlot, pyqtSignal, QObject
 
-def WorkerSignals():
-    raise NotImplementedError
+class WorkerSignals(QObject):
+    #Defines the signals available from a running worker thread
+    finished = pyqtSignal()
+    error = pyqtSignal(tuple)
+    result = pyqtSignal(object)
+    
 
 
 class threadWorker(QRunnable):
