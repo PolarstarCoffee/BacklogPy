@@ -4,7 +4,10 @@ inside layouts
 
 entry.py: 
 -Entry point for backlog application
--imports the object used within backlog.py
+-GUI will be implemented in this class
+    +Customizable background (user uploaded PNG?)
+-imports the backlog object used within backlog.py
+
 
 backlogObj.py:
 -backlog object is defined
@@ -17,3 +20,6 @@ backlogObj.py:
 
 backlogEdit.py:
 -backlog object manipulation 
+    +Edit backlog 
+    +Delete backlog
+    +Create new backlog
