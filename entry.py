@@ -15,7 +15,7 @@ class EntryWindow(QMainWindow):
         centralWidget = QWidget()
         self.setCentralWidget(centralWidget)
         self.setWindowTitle("Backlog App")
-        self.setGeometry(100, 100, 300, 200)
+        self.setGeometry(200, 200, 600, 400)
         
         button = QPushButton("Exit")
         button.pressed.connect(self.close)
