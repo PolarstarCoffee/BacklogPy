@@ -1,8 +1,8 @@
 import sys
 import time
-import backlogObj
-import backlogEdit
-import threadWorker
+import models.backlogObj as backlogObj
+import ui.backlogEdit as backlogEdit
+import managers.threadWorker as threadWorker
 from PyQt6.QtCore import QThreadPool
 from PyQt6.QtWidgets import QVBoxLayout, QWidget, QApplication, QMainWindow, QLabel, QPushButton
 
