@@ -2,6 +2,7 @@ from PyQt6.QtWidgets import QWidget, QApplication, QMainWindow, QLabel, QPushBut
 import sys
 import backlogObj
 import backlogEdit
+import threadWorker
 
 
 # Entry point for the application
@@ -10,16 +11,21 @@ import backlogEdit
 class EntryWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        
-        #main group for adding other widgets later
+        self.setWindowTitle("Backlog App: NAME WIP")
+        #set up the central widget for the main window
         centralWidget = QWidget()
         self.setCentralWidget(centralWidget)
-        self.setWindowTitle("Backlog App")
-        self.setGeometry(200, 200, 600, 400)
         
-        button = QPushButton("Exit")
-        button.pressed.connect(self.close)
+        
+        
+        self.setGeometry(200, 200, 600, 400)
         self.show()
+#core window loop for the application
+
+
+
+
+
 app = QApplication(sys.argv)
 window = EntryWindow()
 app.exec()
