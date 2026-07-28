@@ -1,3 +1,4 @@
+import storage.jsonStorage as jsonStorage
 class backlogManager():
     #Here we define the backlogManager class, which will manage the backlog entries, the UI will never directly edit the backlog entries, 
     #it will always go through this class to do so. This is to ensure that the UI does not have direct access to the backlog entries, 
@@ -33,7 +34,6 @@ class backlogManager():
     def get_all(self):
         return self.entries
     def save_to_file(self, filename):
-        import storage.jsonStorage as jsonStorage
         storage = jsonStorage.jsonStorage()
         data = [entry.__dict__ for entry in self.entries]
         storage.save(data, filename)

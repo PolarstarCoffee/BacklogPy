@@ -43,10 +43,9 @@ class EntryWindow(QMainWindow):
 
 test_entry = models.backlogObj.backlogObj(title="Test Entry", description="This is a test entry.", status="In Progress", thumbnail="test_thumbnail.png", image_paths=["image1.png", "image2.png"])
 backlog_manager = managers.backlogManager.backlogManager()
-print("Current backlog entries:", backlog_manager.get_all())
-#backlog_manager.add(test_entry)
-#backlog_manager.save_to_file("test_backlog.json")
-#print("Saved test entry to test_backlog.json")
+backlog_manager.add(test_entry)
+backlog_manager.save_to_file("test_backlog.json")
+print("Saved test entry to test_backlog.json")
 
 
 if __name__ == "__main__":

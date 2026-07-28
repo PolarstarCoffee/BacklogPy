@@ -1,8 +1,11 @@
 import json
+import os
 
 
 class jsonStorage:
     def save(self, data, filename):
+        desired_dir = "<c>:/dev/backlogApp/data"
+        full_path = os.path.join(desired_dir, filename)
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
     def load(self, filename):
