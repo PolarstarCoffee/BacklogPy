@@ -1,3 +1,6 @@
+import json
+
+
 class jsonStorage:
     def save(self, data, filename):
         with open(filename, 'w') as f:

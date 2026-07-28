@@ -1,7 +1,7 @@
 import sys
 import time
-import models.backlogObj as backlogObj
-import ui.backlogEdit as backlogEdit
+import models.backlogObj
+import managers.backlogManager
 import managers.threadWorker as threadWorker
 from PyQt6.QtCore import QThreadPool
 from PyQt6.QtWidgets import QVBoxLayout, QWidget, QApplication, QMainWindow, QLabel, QPushButton
@@ -41,7 +41,12 @@ class EntryWindow(QMainWindow):
         self.threadpool.start(worker)        
 #core window loop for the application
 
-
+test_entry = models.backlogObj.backlogObj(title="Test Entry", description="This is a test entry.", status="In Progress", thumbnail="test_thumbnail.png", image_paths=["image1.png", "image2.png"])
+backlog_manager = managers.backlogManager.backlogManager()
+print("Current backlog entries:", backlog_manager.get_all())
+#backlog_manager.add(test_entry)
+#backlog_manager.save_to_file("test_backlog.json")
+#print("Saved test entry to test_backlog.json")
 
 
 if __name__ == "__main__":

@@ -1,4 +1,4 @@
-import backlogObj
+import models.backlogObj as backlogObj
 
 #backlog object edit methods
 
