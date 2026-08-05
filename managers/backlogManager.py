@@ -16,7 +16,6 @@ class backlogManager():
         for entry in self._entries:
             if entry.title == title:
                 return entry.copy()
-        return None
     
     def edit(self, title, new_title=None, new_description=None, new_status=None, new_thumbnail=None, new_rating=None):
         entry = self.find(title)
