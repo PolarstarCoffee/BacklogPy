@@ -4,7 +4,8 @@ from dataclasses import asdict
 class backlogManager():
     def __init__(self):
         #where each entry is a backlogObj instance
-        self._entries: list[backlogObj] = []
+        self._entries = []
+        self._storage = jsonStorage.jsonStorage()
         
     def add(self, entry: backlogObj) -> None:
         self._entries.append(entry)
@@ -41,15 +42,12 @@ class backlogManager():
         return self._entries.copy()
     
     def save_to_file(self, filename):
-        storage = jsonStorage.jsonStorage()
         data = [asdict(entry) for entry in self._entries]
-        
-        storage.save(data, filename)
-        
+        self._storage.save(data, filename)
+
     def load_from_file(self, filename):
-        storage = jsonStorage.jsonStorage()
-        data = storage.load(filename)
-        
+        data = self._storage.load(filename)
         self._entries = [backlogObj.backlogObj(**entry) for entry in data]
+        
     def clear_entries(self):
         self._entries.clear()
